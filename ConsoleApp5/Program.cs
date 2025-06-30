@@ -68,6 +68,22 @@ namespace ConsoleApp5
             int result = SumAndSub(Num1, Num2, Num3, Num4);
             Console.WriteLine("Result = " + result);
             #endregion
+
+            #region Q4
+            int Sum(int number)
+            {
+                int sum = 0;
+                while (number != 0)
+                {
+                    sum += number % 10;
+                    number = number / 10;
+                }
+                return sum;
+            }
+            Console.Write("Enter a number: ");
+            int num = int.Parse(Console.ReadLine());
+            Console.WriteLine("The sum of the digits of the number " + num + " is: " + Sum(num));
+            #endregion
         }
     }
 }
