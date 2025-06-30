@@ -84,6 +84,30 @@ namespace ConsoleApp5
             int num = int.Parse(Console.ReadLine());
             Console.WriteLine("The sum of the digits of the number " + num + " is: " + Sum(num));
             #endregion
+
+            #region Q5
+            bool Prime(int number)
+            {
+                if (number <= 1)
+                    return false;
+
+                for (int i = 2; i < number; i++)
+                {
+                    if (number % i == 0)
+                        return false;
+                }
+
+                return true;
+            }
+
+            Console.Write("Enter a number: ");
+            int num1 = int.Parse(Console.ReadLine());
+
+            if (Prime(num1))
+                Console.WriteLine(num1 + "prime number.");
+            else
+                Console.WriteLine(num1 + "not prime number.");
+            #endregion
         }
     }
 }
