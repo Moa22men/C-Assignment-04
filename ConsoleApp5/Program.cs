@@ -152,6 +152,29 @@ namespace ConsoleApp5
             int fac = int.Parse(Console.ReadLine());
             Console.WriteLine("Factorial = " + Factorial(fac));
             #endregion
+
+            #region Q8
+            string ChangeChar(string word, int position, char newChar)
+            {
+                char[] chars = word.ToCharArray(); // change the word into array of letters
+                if (position >= 0 && position < chars.Length)
+                {
+                    chars[position] = newChar;
+                }
+                return new string(chars);
+            }
+
+            Console.Write("Enter a word: ");
+            string word2 = Console.ReadLine();
+            Console.Write("Enter position: ");
+            int pos = int.Parse(Console.ReadLine());
+            Console.Write("Enter new character: ");
+            char ch = char.Parse(Console.ReadLine());
+
+            string result1 = ChangeChar(word2, pos, ch);
+
+            Console.WriteLine("The final output: " + result1);
+            #endregion
         }
     }
 }
