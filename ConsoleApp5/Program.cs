@@ -2,6 +2,10 @@
 
 namespace ConsoleApp5
 {
+    class changename
+    {
+        public string Name;
+    }
     internal class Program
     {
         static void Value(int a)
@@ -12,6 +16,17 @@ namespace ConsoleApp5
         static void Ref(ref int a)
         {
             a = 5;
+        }
+
+        static void Name1(changename p)
+        {
+            p.Name = "Moamen";
+        }
+
+        static void Name2(ref changename p)
+        {
+            p = new changename();
+            p.Name = "Abdelrahman";
         }
         static void Main(string[] args)
         {
@@ -25,6 +40,17 @@ namespace ConsoleApp5
 
             Ref(ref b);
             Console.WriteLine("Change By Ref: " + b); // the output will be 5
+            #endregion
+
+            #region Q2
+            changename person = new changename();
+            person.Name = "Ali";
+
+            Name1(person);
+            Console.WriteLine("Name1: " + person.Name); // the output will be Moamen
+
+            Name2(ref person);
+            Console.WriteLine("Name2: " + person.Name); // the output will be Abdelrahman
             #endregion
         }
     }
