@@ -136,6 +136,22 @@ namespace ConsoleApp5
             Console.WriteLine("Min = " + min);
             Console.WriteLine("Max = " + max);
             #endregion
+
+            #region Q7
+            int Factorial(int n)
+            {
+                int result = 1;
+                for (int i = 2; i <= n; i++)
+                {
+                    result *= i;
+                }
+                return result;
+            }
+
+            Console.Write("Enter a number: ");
+            int fac = int.Parse(Console.ReadLine());
+            Console.WriteLine("Factorial = " + Factorial(fac));
+            #endregion
         }
     }
 }
