@@ -52,6 +52,22 @@ namespace ConsoleApp5
             Name2(ref person);
             Console.WriteLine("Name2: " + person.Name); // the output will be Abdelrahman
             #endregion
+
+            #region Q3
+            int SumAndSub(int n1, int n2, int n3, int n4)
+            {
+                return (n1 + n2) - (n3 + n4);
+            }
+
+            Console.Write("Enter 4 numbers: ");
+            int Num1 = int.Parse(Console.ReadLine());
+            int Num2 = int.Parse(Console.ReadLine());
+            int Num3 = int.Parse(Console.ReadLine());
+            int Num4 = int.Parse(Console.ReadLine());
+
+            int result = SumAndSub(Num1, Num2, Num3, Num4);
+            Console.WriteLine("Result = " + result);
+            #endregion
         }
     }
 }
